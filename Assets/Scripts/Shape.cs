@@ -4,7 +4,22 @@ using UnityEngine;
 
 public abstract class Shape : MonoBehaviour
 {
-    public float movementSpeed;
+    private float m_movementSpeed;
+    public float movementSpeed
+    {
+        get { return m_movementSpeed; }
+        set
+        {
+            if (value < 0.0f)
+            {
+                Debug.Log("Value must be positive");
+            }
+            else
+            {
+                m_movementSpeed = value;
+            }
+        }
+    }
 
     protected abstract void Move();
     

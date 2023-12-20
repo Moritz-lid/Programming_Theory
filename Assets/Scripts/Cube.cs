@@ -12,7 +12,7 @@ public class Cube : Shape
 
     private void Start()
     {
-        movementSpeed = 40.0f;
+        movementSpeed = 60.0f;
     }
 
     private void Update()
